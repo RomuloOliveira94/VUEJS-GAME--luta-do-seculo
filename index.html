@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A luta do século</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <header class="container-header">
+        <div>
+            <h1>Seja bem vindo a batalha do século!</h1>
+        </div>
+        <img src="https://s2.glbimg.com/RUrLzTjwSfMoaXOzHyaHKe_UIyE=/0x27:1496x1105/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/Y/b/pa4c6lQKa0Md1clnYyHw/popo.jpg" class="imagem">
+    </header>
+    <main class="container" id="app">
+        <div class="hp-lutadores">
+            <div class="lutador-1">
+                <h1>Whindersson</h1>
+                <div class="barra-vida">
+                    <div class="vida" :style="progJog1"></div>
+                </div>
+                <h2 class="info-vida">{{contJog1}}%</h2>
+            </div>
+            <div class="lutador-2">
+                <h1>Popó</h1>
+                <div class="barra-vida">
+                    <div class="vida" :style="progJog2"></div>
+                </div>
+                <h2 class="info-vida">{{contJog2}}%</h2>
+            </div>
+        </div>
+        <div class="botoes-container">
+            <div v-if="!inicio">
+                <button class="botao-iniciar" @click="inicio = !inicio">Porradaria</button>
+            </div>
+            <div v-else-if="contJog1 === 0 || contJog2 === 0" class="botao-final">
+            <h1>Batalha encerrada {{vencedor()}} é o grande campeão!</h1> 
+            <button @click="desistir" class="botao-iniciar">Jogar novamente</button> 
+            </div>
+            <div class='botoes-acao' v-else>
+                <button class="botoes-soco" @click="soco">Soco</button>
+                <button class="botoes-socao"@click="socao">Socão</button>
+                <button class="botoes-curar" @click='curar'>Recupera</button>
+                <button class="botoes-desistir" @click="desistir">Amarelar</button>
+            </div>
+        </div>
+        <div class="logs" v-show="logWhind.length">
+            <ul class="infos-acao" v-if="flag === true">
+            <li class="infos-jogadores" >
+                {{logWhind.join('')}}<br>
+                {{logPopo.join('')}}
+            </li>
+            </ul>
+            <ul class="infos-acao" v-if="flag === false">
+                <li class="infos-jogadores">
+                {{cura.join('')}} <br>
+                {{logWhind.join('')}}
+            </li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

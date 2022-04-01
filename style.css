@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #E1A17E;
+}
+/*header*/
+.container-header{
+    margin: auto;
+    width: 100vw;
+    height: 30vh;
+    background-color: rgb(7, 7, 7);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.59);
+}
+
+.container-header > div > h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: min(50px, 5vh);
+    letter-spacing: 2px;
+    color: red;
+    text-align: center;
+}
+
+.imagem{
+    width: 15vw;
+}
+
+
+/*jogo*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*barras de vida*/
+.hp-lutadores{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90vw;
+    height: 30vh;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    box-shadow: 0px 0px 5px black;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.318);
+    background-color: rgba(255, 255, 255, 0.745);
+}
+
+.info-vida{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.318);
+}
+
+.barra-vida{
+    background-color: rgba(255, 255, 255, 0.745);
+    border: 1px solid black;
+    width: 30vw;
+    height: 3vh;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.59);
+}
+
+.vida{
+    background-color: lightgreen;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    
+}
+
+/*botoes*/
+.botoes-container{
+    box-shadow: 0px 0px 5px black;
+    margin: 20px;
+    width: 90vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.745);
+}
+
+button{
+    height: 70px;
+    width: 180px;
+    font-size: 20px;
+    background-color: rgb(14, 13, 13);
+    color: black;
+    border-radius: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+}
+
+.botao-iniciar{
+    color: white;
+    align-self: center;
+}
+
+
+button:hover{
+    box-shadow:0 0 10px rgb(0, 0, 0);
+
+}
+
+button:active{
+    position:relative;
+    top:5px;
+    box-shadow:none;
+}
+
+.botoes-soco{
+    background-color: red;
+}
+.botoes-socao{
+    background-color: crimson;
+}
+.botoes-curar{
+    background-color: lightgreen;
+}
+.botoes-desistir{
+    background-color: yellow;
+}
+
+.botao-final{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.botao-final > h1{
+    line-height: 5vh;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.318);
+    font-size: 35px;
+}
+.botao-final > button{
+    margin-top: 10px;
+    background-color: rgba(37, 37, 233, 0.93);
+}
+
+/* informações da batalha*/
+.logs{
+    width: 90vw;
+    box-shadow: 0px 0px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: red;
+}
+
+.infos-acao{
+   list-style: none;
+}
+.infos-jogadores{
+    line-height: 5vh;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.318);
+    font-size: 35px;
+}
